@@ -136,6 +136,48 @@
     font-size: 0.8rem;
 }
 
+/* RESPONSIVE: PAGE-SPECIFIC */
+
+@media (max-width: 991px) {
+    .food-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .menu-feature {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .menu-feature .menu-image {
+        min-height: 260px;
+    }
+
+    .ingredient-ribbon {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-feature {
+        grid-column: auto;
+    }
+
+    .menu-feature .menu-image {
+        min-height: 240px;
+    }
+
+    .deco-wave,
+    .deco-coast {
+        bottom: 0;
+        height: 25%;
+    }
+}
+
 </style>
 </head>
 
@@ -265,5 +307,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/script.js"></script>
 </body>
-
 </html>
