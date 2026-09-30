@@ -301,6 +301,61 @@
     font-size: 0.9rem;
 }
 
+/* RESPONSIVE: PAGE-SPECIFIC */
+
+@media (max-width: 991px) {
+    .ambon-hero {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .ambon-fact-stack {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-wrap {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .ambon-hero h2 {
+        font-size: 4rem;
+    }
+
+    .ambon-fact-stack {
+        grid-template-columns: 1fr;
+    }
+
+    .ambon-map-card {
+        grid-template-columns: 1fr;
+    }
+
+    .ambon-map-frame,
+    .ambon-map-frame iframe {
+        min-height: 260px;
+    }
+
+    .timeline-heading h3 {
+        font-size: 2.2rem;
+    }
+
+    .story-timeline > li {
+        padding-left: 1.4rem;
+    }
+
+    .story-year {
+        left: -23px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
 </style>
 </head>
 
@@ -486,5 +541,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/script.js"></script>
 </body>
-
 </html>
