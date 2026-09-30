@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hometown | Ambon</title>
+  <meta name="description"
+    content="An English introduction to Ambon, Maluku: its geography, history, population, music identity, food culture, and community values.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+<style id="page-style">
+/* AMBON OVERVIEW */
+
+.ambon-section {
+    color: var(--white);
+    background: linear-gradient(120deg, #751f28 0%, #a72e37 55%, #c84e48 100%);
+}
+
+.deco-baju {
+    width: 45%;
+    height: 45%;
+    top: 8%;
+    right: -8%;
+    background: url("../assets/img/deco-diamond.svg") center / contain no-repeat;
+    opacity: 0.12;
+}
+
+.ambon-hero {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.display-kicker {
+    margin: 0 0 0.3rem;
+    color: #ffdca0;
+    font-size: 1.15rem;
+}
+
+.ambon-hero h2 {
+    color: var(--white);
+    font-size: 6rem;
+    letter-spacing: -0.05em;
+}
+
+.ambon-hero h2 span {
+    color: var(--gold-light);
+}
+
+.ambon-hero-copy > p:not(.eyebrow):not(.display-kicker) {
+    max-width: 60ch;
+    margin: 1rem 0 1.4rem;
+    color: rgba(255, 247, 232, 0.82);
+}
+
+.ambon-fact-stack {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.ambon-number-card {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+}
+
+.ambon-number-card span {
+    display: block;
+    color: var(--gold-light);
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.ambon-number-card small {
+    display: block;
+    margin-top: 0.4rem;
+    color: rgba(255, 247, 232, 0.7);
+}
+
+.ambon-number-card.cream {
+    color: var(--text);
+    background: var(--cream);
+}
+
+.ambon-number-card.cream span {
+    color: var(--red-dark);
+}
+
+.ambon-number-card.cream small {
+    color: var(--muted);
+}
+
+.ambon-map-card {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    margin-top: 2rem;
+    overflow: hidden;
+    background: rgba(43, 25, 29, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+}
+
+.ambon-map-copy {
+    padding: 1.5rem;
+}
+
+.ambon-map-copy h3 {
+    margin-bottom: 0.6rem;
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.ambon-map-copy p:not(.eyebrow) {
+    color: rgba(255, 247, 232, 0.72);
+}
+
+.map-link {
+    color: var(--gold-light);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.map-link:hover {
+    text-decoration: underline;
+}
+
+.ambon-map-frame {
+    min-height: 300px;
+    background: #eadfce;
+}
+
+.ambon-map-frame iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    display: block;
+    border: 0;
+}
+
+.map-attribution {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 0.45rem 0.8rem;
+    color: rgba(255, 247, 232, 0.5);
+    font-size: 0.62rem;
+    text-align: right;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.culture-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.culture-card {
+    min-height: 220px;
+    padding: 1.4rem;
+    border-radius: 14px;
+}
+
+.culture-card h3 {
+    margin-bottom: 0.6rem;
+}
+
+.culture-card p:last-child {
+    margin-bottom: 0;
+}
+
+.culture-icon {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.culture-red {
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.culture-red h3 {
+    color: var(--gold-light);
+}
+
+.culture-red p {
+    color: rgba(255, 247, 232, 0.75);
+}
+
+.culture-gold {
+    color: var(--red-dark);
+    background: var(--gold);
+}
+
+.culture-gold h3 {
+    color: var(--red-dark);
+}
+
+.culture-paper {
+    color: var(--text);
+    background: var(--cream);
+}
+
+/* AMBON TIMELINE */
+
+.timeline-wrap {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 0.72fr 1.28fr;
+    gap: 4rem;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.timeline-heading h3 {
+    margin-bottom: 0.55rem;
+    color: var(--white);
+    font-size: 3.1rem;
+}
+
+.timeline-heading p:last-child {
+    max-width: 38ch;
+    margin-bottom: 0;
+    color: rgba(255, 247, 232, 0.7);
+}
+
+.story-timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 2px solid rgba(255, 255, 255, 0.22);
+}
+
+.story-timeline > li {
+    position: relative;
+    padding: 0 0 1rem 2rem;
+}
+
+.story-year {
+    position: absolute;
+    top: 6px;
+    left: -24px;
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    color: var(--red-dark);
+    background: var(--gold);
+    border: 2px solid var(--red-dark);
+    border-radius: 50%;
+    font-size: 0.55rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.story-card {
+    padding: 1rem;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+}
+
+.story-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.story-card summary {
+    color: var(--white);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.story-card summary::marker {
+    color: var(--gold);
+}
+
+.story-card p {
+    margin: 0.65rem 0 0;
+    color: rgba(255, 247, 232, 0.75);
+    font-size: 0.9rem;
+}
+
+</style>
+</head>
+
+<body data-page="hometown">
+  <header class="site-header">
+  <nav class="navbar navbar-expand-lg" aria-label="Primary navigation">
+    <div class="container nav-shell">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-line"></span>
+        <span class="toggler-line"></span>
+        <span class="toggler-line"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav site-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html" data-page-link="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../profile/index.html" data-page-link="profile">Profile</a>
+          </li>
+          <li class="nav-item dropdown ambon-nav-item">
+            <div class="ambon-nav-group">
+              <a class="nav-link ambon-main-link" href="../hometown/index.html" data-page-link="ambon">
+                Ambon
+              </a>
+              <button class="ambon-menu-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false" aria-label="Open Ambon sections">
+                <span aria-hidden="true">⌄</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="../hometown/index.html" data-page-link="hometown">Hometown</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../food/index.html" data-page-link="food">Local Food</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../tourist/index.html" data-page-link="places">Places to Visit</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <main>
+    <section class="chapter-section ambon-section" id="ambon" data-section="ambon">
+      <div class="section-deco deco-baju" aria-hidden="true"></div>
+      <div class="container position-relative">
+        <div class="ambon-hero">
+          <div class="ambon-hero-copy">
+            <p class="eyebrow light">THE HOMETOWN</p>
+            <p class="display-kicker">The city around the bay.</p>
+            <h2>MALUKU,<br>
+            <span>AMBON</span>
+            </h2>
+            <p>Ambon is the capital of Maluku Province, shaped by Ambon Bay, island geography, maritime history, music, food, and communities whose traditions continue to influence everyday life.</p>
+            
+          </div>
+          <div class="ambon-fact-stack">
+            <div class="ambon-number-card interactive-card"><span>619,000</span><small>official 2026 population</small></div>
+            <div class="ambon-number-card warm interactive-card"><span>UNESCO</span><small>Creative City of Music · 2019</small></div>
+            <div class="ambon-number-card cream interactive-card"><span>1575</span><small>city founding year used by Ambon City Government</small></div>
+          </div>
+        </div>
+
+        <div class="ambon-map-card interactive-card">
+  <div class="ambon-map-copy">
+    <p class="eyebrow light">WHERE AMBON SITS</p>
+    <h3>Island city, bay, and coastline.</h3>
+    <p>Use the map as a quick geographic anchor before exploring the city's history, culture, food, and places.</p>
+    <a class="map-link" href="https://www.openstreetmap.org/?mlat=-3.6954&mlon=128.1814#map=12/-3.6954/128.1814" target="_blank" rel="noopener">Open larger map ↗</a>
+  </div>
+  <div class="ambon-map-frame">
+    <iframe
+      title="Map of Ambon, Maluku"
+      loading="lazy"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=128.115%2C-3.755%2C128.245%2C-3.625&amp;layer=mapnik&amp;marker=-3.6954%2C128.1814">
+    </iframe>
+  </div>
+
+  <p class="map-attribution">Map © OpenStreetMap contributors</p>
+
+      </div>
+        <div class="culture-grid">
+          <article class="culture-card culture-red interactive-card">
+            <span class="culture-icon">♫</span><p class="eyebrow light">MUSIC</p><h3>A city that sings.</h3><p>Music is one of Ambon's clearest cultural signatures, from community singing and performances to the wider creative scene recognized by UNESCO.</p>
+          </article>
+          <article class="culture-card culture-gold interactive-card">
+            <span class="culture-icon">◇</span><p class="eyebrow">COMMUNITY</p><h3>Connection matters.</h3><p>Ideas such as <em>Pela Gandong</em> and <em>Ale Rasa Beta Rasa</em> are associated with kinship, empathy, mutual support, and peaceful coexistence.</p>
+          </article>
+          <article class="culture-card culture-paper interactive-card">
+            <span class="culture-icon">◒</span><p class="eyebrow">COASTAL LIFE</p><h3>Sea, hills, city.</h3><p>Beaches, hills, neighborhoods, and the bay sit surprisingly close together, giving Ambon a strong relationship with its landscape.</p>
+          </article>
+        </div>
+
+        <div class="timeline-wrap" id="timeline">
+          <div class="timeline-heading">
+            <p class="eyebrow light">A FEW MOMENTS</p>
+            <h3>Ambon through time.</h3>
+            <p>Open a chapter to see how a few milestones connect with the city's story.</p>
+          </div>
+          <ol class="story-timeline">
+            <li>
+              <span class="story-year">1575</span>
+              <details class="story-card" open>
+                <summary>Early foundations</summary>
+                <p>The Government of Ambon uses 1575 as the city's birth year, linked to early settlements around the Portuguese fort at Honipopu.</p>
+              </details>
+            </li>
+            <li>
+              <span class="story-year">1605</span>
+              <details class="story-card">
+                <summary>The Dutch period begins</summary>
+                <p>Ambon's colonial history shifted when the Dutch took over the Portuguese fort, later known as Benteng Victoria.</p>
+              </details>
+            </li>
+            <li>
+              <span class="story-year">1817</span>
+              <details class="story-card">
+                <summary>Teenage rebel against the Dutch</summary>
+                <p>One of Ambon's most prominent monuments honors Martha Christina Tiahahu, an Ambonese guerrilla leader who fought fiercely against the colonial military in 1817 starting when she was just 17 years old.</p>
+              </details>
+            </li>
+            <li>
+              <span class="story-year">20th century</span>
+              <details class="story-card">
+                <summary>A changing regional city</summary>
+                <p>Ambon developed as an administrative and commercial center while remaining closely connected to the surrounding islands and maritime life.</p>
+              </details>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-title">MANISE</p>
+      <p class="mb-0">A personal static website by Marvel Noya.</p>
+    </div>
+
+    <div class="footer-socials" aria-label="Social media">
+      <a href="https://www.instagram.com/mrvlnoya/" target="_blank" rel="noopener noreferrer"
+        aria-label="Instagram" title="Instagram">
+        <i class="bi bi-instagram"></i>
+      </a>
+
+      <a href="https://github.com/MonoPxl" target="_blank" rel="noopener noreferrer"
+        aria-label="GitHub" title="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/marvel-noya-ab5524257/" target="_blank" rel="noopener noreferrer"
+        aria-label="LinkedIn" title="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© 2026 Marvel Noya</span>
+      <div class="footer-sources">
+        <a href="https://ambon.go.id/" target="_blank" rel="noopener noreferrer">
+          Ambon City Government
+        </a>
+        <span>·</span>
+        <a href="https://www.unesco.org/en/creative-cities/ambon"
+          target="_blank" rel="noopener noreferrer">
+          UNESCO
+        </a>
+      </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

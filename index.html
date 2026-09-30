@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marvel Noya | Ambon</title>
+  <meta name="description" content="A personal static website by Marvel Noya, introducing Ambon, Maluku, alongside a short personal profile.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+<style id="page-style">
+/* HOME */
+
+.home-section {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    background: linear-gradient(120deg, #721d25 0%, #a82e37 50%, #d59a42 100%);
+}
+
+.deco-grid {
+    inset: 0;
+    background: url("assets/img/deco-grid.svg") repeat;
+    background-size: 250px 250px;
+    opacity: 0.12;
+}
+
+.deco-diamond {
+    width: 300px;
+    height: 300px;
+    right: -70px;
+    bottom: 10%;
+    background: url("assets/img/deco-diamond.svg") center / contain no-repeat;
+    opacity: 0.2;
+    transform: rotate(10deg);
+}
+
+.home-hero {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 4rem;
+    padding-top: 3rem;
+}
+
+.home-hero h1 {
+    color: var(--white);
+    font-size: 6rem;
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+}
+
+.home-hero h1 span {
+    color: var(--gold-light);
+}
+
+.hero-subtitle-large {
+    margin: 1rem 0 0.75rem;
+    color: #ffefd2;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.home-intro {
+    max-width: 58ch;
+    color: rgba(255, 247, 232, 0.85);
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-primary-warm,
+.btn-outline-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.btn-primary-warm {
+    color: var(--red-dark);
+    background: var(--gold);
+    border: 1px solid var(--gold-light);
+}
+
+.btn-primary-warm:hover {
+    color: var(--red-dark);
+    transform: translateY(-2px);
+}
+
+.btn-outline-light {
+    color: var(--white);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline-light:hover {
+    color: var(--red-dark);
+    background: var(--gold);
+    border-color: var(--gold);
+}
+
+.text-link-light {
+    display: inline-flex;
+    align-items: center;
+    color: var(--gold-light);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.text-link-light:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.home-hero-visual {
+    position: relative;
+    min-height: 420px;
+    display: grid;
+    place-items: center;
+}
+
+.hero-photo-card {
+    width: 360px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 45px rgba(69, 27, 22, 0.25);
+    transform: rotate(2deg);
+    transition: 0.3s ease;
+}
+
+.hero-photo-card:hover {
+    transform: rotate(0) translateY(-6px);
+}
+
+.hero-photo-card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.hero-photo-caption {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 0.25rem 0.1rem;
+    color: #ffefd2;
+}
+
+.hero-photo-caption span {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+}
+
+.hero-photo-caption strong {
+    font-size: 0.85rem;
+}
+
+.home-stats {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-stats > div {
+    padding: 1rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-stats > div:last-child {
+    border-right: 0;
+}
+
+.home-stats span {
+    display: block;
+    color: var(--gold-light);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.home-stats small {
+    color: rgba(255, 247, 232, 0.7);
+}
+
+/* CLOSING SECTION */
+
+.closing-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 8rem 0;
+    color: var(--white);
+    background:linear-gradient(60deg, #2e7079 0%, #4f7f84 35%, #7f9581 65%, #d5ad4b 100%);
+    overflow: hidden;
+}
+
+.closing-grid {
+    position: absolute;
+    inset: 0;
+    background-image: url("assets/img/deco-grid.svg");
+    background-repeat: repeat;
+    background-size: 260px 260px;
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.deco-closing {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    right: -70px;
+    bottom: -70px;
+    background-image: url("assets/img/deco-diamond.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.22;
+    transform: rotate(12deg);
+    pointer-events: none;
+}
+
+.closing-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    margin: 0;
+    text-align: left;
+}
+
+.closing-inner h2 {
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    font-size: 120px;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.closing-inner > p:not(.eyebrow) {
+    max-width: 700px;
+    margin-bottom: 0;
+    color: rgba(255, 247, 232, 0.82);
+    font-size: 20px;
+}
+
+.closing-inner .btn-primary-warm {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.closing-inner .btn-primary-warm span {
+    transition: transform 0.2s ease;
+}
+
+.closing-inner .btn-primary-warm:hover span {
+    transform: translateY(-2px);
+}
+
+</style>
+</head>
+<body data-page="home">
+
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg" aria-label="Primary navigation">
+    <div class="container nav-shell">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-line"></span>
+        <span class="toggler-line"></span>
+        <span class="toggler-line"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav site-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" data-page-link="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile/index.html" data-page-link="profile">Profile</a>
+          </li>
+          <li class="nav-item dropdown ambon-nav-item">
+            <div class="ambon-nav-group">
+              <a class="nav-link ambon-main-link" href="hometown/index.html" data-page-link="ambon">
+                Ambon
+              </a>
+              <button class="ambon-menu-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false" aria-label="Open Ambon sections">
+                <span aria-hidden="true">⌄</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="hometown/index.html" data-page-link="hometown">Hometown</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="food/index.html" data-page-link="food">Local Food</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="tourist/index.html" data-page-link="places">Places to Visit</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="chapter-section home-section" id="home">
+
+    <div class="section-deco deco-grid" aria-hidden="true"></div>
+    
+    <div class="section-deco deco-diamond" aria-hidden="true"></div>
+
+    <div class="container position-relative">
+      <div class="home-hero">
+        <div class="home-hero-copy">
+          <p class="eyebrow light">WELCOME TO</p>
+          <h1>AMBON<br><span>MANISE</span></h1>
+          <p class="hero-subtitle-large">A small window into a place I call home.</p>
+          <p class="home-intro">
+            This website introduces the city, culture, food, and places that make Ambon meaningful to me,
+            then gives you a little context about me.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn-primary-warm" href="hometown/index.html">Explore Ambon <span>→</span></a>
+            <a class="text-link-light" href="profile/index.html">Meet me →</a>
+          </div>
+        </div>
+
+        <div class="home-hero-visual">
+          <div class="hero-photo-card interactive-card">
+            <img loading="eager" src="assets/img/marvelyouth5 cropped.jpeg" alt="Marvel Noya">
+            <div class="hero-photo-caption">
+              <span>ROOTS</span>
+              <strong>Ambon, Maluku</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-stats">
+        <div><span>1575</span><small>city founding year</small></div>
+        <div><span>2019</span><small>UNESCO City of Music</small></div>
+        <div><span>619,000</span><small>residents · 2026</small></div>
+        <div><span>05</span><small>pages to explore</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing-section">
+    <div class="section-deco closing-grid" aria-hidden="true"></div>
+    <div class="section-deco deco-closing" aria-hidden="true"></div>
+    <div class="container position-relative">
+      <div class="closing-inner">
+        <h2>From Ambon,<br>with a little more curiosity.</h2>
+        <p>I hope this small digital journey leaves you with more than a list of places or dishes. A hometown is also memory, identity, and the perspective we carry into whatever comes next.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-title">MANISE</p>
+      <p class="mb-0">A personal website by Marvel Noya.</p>
+    </div>
+
+    <div class="footer-socials" aria-label="Social media">
+        <!-- Replace the three placeholder URLs with your own profiles. -->
+        <a href="https://www.instagram.com/mrvlnoya/" target="_blank" rel="noopener noreferrer"
+          aria-label="Instagram" title="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+
+        <a href="https://github.com/MonoPxl" target="_blank" rel="noopener noreferrer"
+          aria-label="GitHub" title="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/marvel-noya-ab5524257/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© 2026 Marvel Noya</span>
+
+      <div class="footer-sources">
+        <a href="https://ambon.go.id/" target="_blank" rel="noopener noreferrer">
+          Ambon City Government
+        </a>
+        <span>·</span>
+        <a href="https://www.unesco.org/en/creative-cities/ambon"
+          target="_blank" rel="noopener noreferrer">
+          UNESCO
+        </a>
+      </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

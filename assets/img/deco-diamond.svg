@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360" fill="none">
+  <g opacity=".9">
+    <path d="M180 20L340 180L180 340L20 180L180 20Z" stroke="#e6b84a" stroke-width="2"/>
+    <path d="M180 60L300 180L180 300L60 180L180 60Z" stroke="#f8dda1" stroke-width="2"/>
+    <path d="M180 100L260 180L180 260L100 180L180 100Z" stroke="#e6b84a" stroke-width="2"/>
+    <path d="M180 140L220 180L180 220L140 180L180 140Z" fill="#e6b84a" opacity=".22"/>
+  </g>
+</svg>

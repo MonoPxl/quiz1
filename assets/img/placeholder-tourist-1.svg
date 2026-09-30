@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#f8dfd9"/>
+  <g opacity="0.20" stroke="#c92a2a" stroke-width="2">
+    <path d="M0 80H400M0 160H400M0 240H400M0 320H400"/>
+    <path d="M80 0V400M160 0V400M240 0V400M320 0V400"/>
+  </g>
+  <rect x="10" y="10" width="380" height="380" fill="none" stroke="#8f1d1d" stroke-width="4" stroke-dasharray="9 7"/>
+  <circle cx="200" cy="160" r="54" fill="#f0c34e" opacity="0.92"/>
+  <text x="200" y="245" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#8f1d1d" text-anchor="middle">Pintu Kota Beach</text>
+  <text x="200" y="278" font-family="Arial, sans-serif" font-size="14" fill="#2f2522" text-anchor="middle">Replace with your own photo</text>
+</svg>

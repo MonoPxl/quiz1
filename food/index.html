@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food | Ambon</title>
+  <meta name="description"
+    content="A look at traditional foods connected with Ambon and Maluku, including papeda, grilled fish with colo-colo, kohu-kohu, and coconut rice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+<style id="page-style">
+/* FOOD */
+
+.food-section {
+    background: linear-gradient(145deg, #fff8ea 0%, #f8ecd7 55%, #f3dfd7 100%);
+}
+
+.deco-wave,
+.deco-coast {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 9cm;
+    height: 30%;
+    background: url("../assets/img/deco-wave.svg") repeat-x bottom;
+    background-size: 500px 180px;
+    opacity: 0.17;
+}
+
+.food-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.menu-card {
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.menu-feature {
+    grid-row: span 2;
+}
+
+.menu-image {
+    overflow: hidden;
+    background: var(--paper);
+}
+
+.menu-card:not(.menu-feature) .menu-image {
+    aspect-ratio: 4 / 3;
+}
+
+.menu-feature .menu-image {
+    min-height: 300px;
+}
+
+.menu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover .menu-image img {
+    transform: scale(1.04);
+}
+
+.menu-body {
+    padding: 1.1rem;
+}
+
+.menu-index {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--red);
+    font-size: 0.67rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.menu-body h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.menu-body p {
+    margin-bottom: 0;
+    color: var(--muted);
+}
+
+.ingredient-ribbon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    color: var(--white);
+    background: var(--red-dark);
+    border-radius: 12px;
+}
+
+.ingredient-ribbon > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.ingredient-ribbon span {
+    padding: 0.3rem 0.55rem;
+    color: var(--gold-light);
+    font-size: 0.65rem;
+    font-weight: 800;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+}
+
+.ingredient-ribbon p {
+    max-width: 30ch;
+    margin: 0;
+    color: rgba(255, 247, 232, 0.75);
+    font-size: 0.8rem;
+}
+
+</style>
+</head>
+
+<body data-page="food">
+  <header class="site-header">
+  <nav class="navbar navbar-expand-lg" aria-label="Primary navigation">
+    <div class="container nav-shell">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-line"></span>
+        <span class="toggler-line"></span>
+        <span class="toggler-line"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav site-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html" data-page-link="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../profile/index.html" data-page-link="profile">Profile</a>
+          </li>
+          <li class="nav-item dropdown ambon-nav-item">
+            <div class="ambon-nav-group">
+              <a class="nav-link ambon-main-link" href="../hometown/index.html" data-page-link="ambon">
+                Ambon
+              </a>
+              <button class="ambon-menu-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false" aria-label="Open Ambon sections">
+                <span aria-hidden="true">⌄</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="../hometown/index.html" data-page-link="hometown">Hometown</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../food/index.html" data-page-link="food">Local Food</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../tourist/index.html" data-page-link="places">Places to Visit</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+  
+  <main>
+    <section class="chapter-section food-section" id="food" data-section="food">
+      <div class="section-deco deco-wave" aria-hidden="true"></div>
+      <div class="container position-relative">
+        <div class="section-intro split-intro">
+          <div><p class="eyebrow">FLAVOURS</p><h2>Put Ambon on the table.</h2></div>
+          <p>Food is another way into a place. Here, sago, fish, coconut, spices, kenari, and local citrus build a flavor profile that feels unmistakably Mollucan.</p>
+        </div>
+
+        <div class="food-grid">
+          <article class="menu-card menu-feature interactive-card">
+            <div class="menu-image"><img loading="lazy" src="../assets/img/papeda kuah kuning.jpg" alt="Papeda and yellow fish soup"></div>
+            <div class="menu-body"><span class="menu-index">01 · STAPLE</span><h3>Papeda &amp; Yellow Fish Soup</h3><p>A sago-based staple commonly paired with fresh fish and a fragrant yellow broth. Its mild taste and distinctive texture make the soup and its sides do the talking.</p><br><p>The most iconic part of eating Papeda isn't just the flavor—it's the highly interactive, almost theatrical way it's served and eaten. Because papeda is incredibly sticky and elastic, you can't just scoop it out with a spoon. Instead, you use a pair of wooden fork-like bamboo sticks called gata-gata. You dip the sticks into the communal pot, pinch a portion of the sticky mass, and twirl them rapidly in opposite directions, like winding up a ball of yarn, to sever the thick, stretchy strands. Once you've successfully rolled it up, you quickly drop it into your personal bowl of yellow soup. And the golden rule once it's in your bowl? Don't chew. Papeda is meant to be slurped directly from the bowl and swallowed whole along with the savory broth. If you try to chew it, it will simply bounce around and stick to your teeth!</p></div>
+          </article>
+          <article class="menu-card interactive-card">
+            <div class="menu-image"><img loading="lazy" src="../assets/img/Ikan-Bakar-dan-Colo-colo.jpg" alt="Grilled fish with colo-colo"></div>
+            <div class="menu-body"><span class="menu-index">02 · SEA</span><h3>Grilled Fish &amp; Colo-Colo</h3><p>Fresh grilled fish served with a bright chili, shallot, tomato, and citrus condiment.</p></div>
+          </article>
+          <article class="menu-card interactive-card">
+            <div class="menu-image"><img loading="lazy" src="../assets/img/kohu-kohu.jpeg" alt="Gogos"></div>
+            <div class="menu-body"><span class="menu-index">03 · SALAD</span><h3>Kohu-kohu</h3><p>Consists of shredded smoked skipjack tuna, grated coconut, lemon basil, long beans, and bean sprouts, all brightened with a squeeze of calamansi lime.</p></div>
+          </article>
+          <article class="menu-card interactive-card">
+            <div class="menu-image"><img loading="lazy" src="../assets/img/nasi-kelapa.jpg" alt="Nasi Kelapa"></div>
+            <div class="menu-body"><span class="menu-index">04 · COCONUT</span><h3>Nasi Kelapa</h3><p>Coconut rice with savory side dishes, a simple expression of coconut's recurring role in Malukan cooking.</p></div>
+          </article>
+        </div>
+
+        <div class="ingredient-ribbon interactive-card">
+          <div><span>SAGO</span><span>FISH</span><span>COCONUT</span><span>SPICES</span><span>CITRUS</span></div>
+          <p>The ingredients tell a story of island agriculture, the sea, and local adaptation.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-title">MANISE</p>
+      <p class="mb-0">A personal static website by Marvel Noya.</p>
+    </div>
+
+    <div class="footer-socials" aria-label="Social media">
+      <a href="https://www.instagram.com/mrvlnoya/" target="_blank" rel="noopener noreferrer"
+        aria-label="Instagram" title="Instagram">
+        <i class="bi bi-instagram"></i>
+      </a>
+
+      <a href="https://github.com/MonoPxl" target="_blank" rel="noopener noreferrer"
+        aria-label="GitHub" title="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/marvel-noya-ab5524257/" target="_blank" rel="noopener noreferrer"
+        aria-label="LinkedIn" title="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© 2026 Marvel Noya</span>
+      <div class="footer-sources">
+        <a href="https://ambon.go.id/" target="_blank" rel="noopener noreferrer">
+          Ambon City Government
+        </a>
+        <span>·</span>
+        <a href="https://www.unesco.org/en/creative-cities/ambon"
+          target="_blank" rel="noopener noreferrer">
+          UNESCO
+        </a>
+      </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
