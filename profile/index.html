@@ -195,6 +195,46 @@
     color: rgba(255, 247, 232, 0.8);
 }
 
+
+/* RESPONSIVE: PAGE-SPECIFIC */
+
+@media (max-width: 991px) {
+    .profile-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .identity-card-body {
+        grid-template-columns: 160px 1fr;
+    }
+
+    .motto-strip {
+        grid-template-columns: auto 1fr;
+    }
+
+    .motto-strip > p {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 767px) {
+    .identity-card-body {
+        grid-template-columns: 1fr;
+    }
+
+    .identity-photo {
+        max-width: 180px;
+    }
+
+    .motto-strip {
+        grid-template-columns: auto 1fr;
+    }
+
+    .motto {
+        font-size: 1.4rem;
+    }
+}
+
 </style>
 </head>
 
@@ -344,5 +384,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/script.js"></script>
 </body>
-
 </html>
