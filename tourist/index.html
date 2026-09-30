@@ -111,6 +111,28 @@
     }
 }
 
+/* RESPONSIVE: PAGE-SPECIFIC */
+
+@media (max-width: 991px) {
+    .destination-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-bar {
+        gap: 0.4rem;
+    }
+
+    .filter-btn {
+        padding: 0.45rem 0.75rem;
+    }
+}
+
 </style>
 </head>
 
@@ -243,5 +265,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/script.js"></script>
 </body>
-
 </html>
